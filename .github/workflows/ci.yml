@@ -13,10 +13,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: convictional/trigger-workflow-and-wait@v1.6.1
-        with:
-          owner: Heihokon
-          repo: test-demo
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          workflow_file_name: pages.yml
+      - run : curl -X POST -d {} https://api.netlify.com/build_hooks/6305df2f31d1ae554f7212a1
 
